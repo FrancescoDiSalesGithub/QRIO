@@ -22,7 +22,7 @@ class qrEncoder:
         if self.__checkformat(format) != True:
             raise FormatException("Invalid Extension","Method encode has a wrong extension")
 
-        maker = qrcode.make(self,content)
+        maker = qrcode.make(self.__content)
         filename_definitive="{}.{}".format(str(self.__filename),str(format))
         maker.save(filename_definitive)
 
