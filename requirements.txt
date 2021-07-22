@@ -1,1 +1,1 @@
-qr-code
+qrcode[pil]
