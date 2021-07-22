@@ -1,4 +1,7 @@
 import qrcode
+from PIL import Image
+from pyzbar.pyzbar import decode
+
 import re
 
 class ExtensionException(Exception):
@@ -44,3 +47,23 @@ class qrEncoder:
 
     def set_filename(self,value):
         self.__filename=str(value)
+
+
+
+class qrDecoder:
+
+    def __init__(self,filename):
+        self.__filename=filename
+
+    def decode(self):
+        return str(decode(Image.open(self.__filename)))
+
+
+    def get_filename(self)->str:
+        return self.__filename
+
+    def set_filename(self,filename):
+        self.__filename=filename
+
+
+
