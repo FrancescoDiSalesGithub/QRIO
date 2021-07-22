@@ -1,1 +1,4 @@
 qrcode[pil]
+pyqrcode
+pyzbar
+
